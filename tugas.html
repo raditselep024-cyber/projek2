@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    .hero{
+      background-image: url("https://cdn.readers.id/media/images/2026/03/ckuEsSiF80.jpeg?location=1&width=&height=&quality=90&fit=1");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        min-height: 100vh;
+    }
+
+
+.banner-statistik {
+    background-color: #38bdf8;
+    color: white;
+    padding: 4rem 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.icon-stat {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0; 
+}
+
+
+
+.kerjasama {
+    background-color: #2f4ea2; /* biru */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.kerjasama h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.kerjasama p {
+    font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    opacity: 0.8;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.logo-container img {
+    width: 100px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.logo-container img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+.partner-section {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .partner-logo img {
+      max-height: 50px;
+      margin: 15px;
+      filter: brightness(0) invert(1); /* biar putih */
+      transition: transform 0.3s;
+    }
+
+    .partner-logo img:hover {
+      transform: scale(1.1);
+    }
+
+     </style>
+</head>
+<body>
+  
+    <div class="container-fixed  ">
+ <nav class="navbar bg-dark border-bottom border-body nav " data-bs-theme="dark">
+
+ <img src="https://smkn1tengaran.sch.id/wp-content/uploads/2025/10/logo-web-1.jpg" class="rounded float-start" alt="...">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#beranda">Beranda</a>
+    </div>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#visi-misi">Visi-Misi</a>
+    </div>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Jurusan
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#pplg">PPLG</a></li>
+    <li><a class="dropdown-item" href="#tjkt">TJKT</a></li>
+    <li><a class="dropdown-item" href="#kuliner">KULINER</a></li>
+    <li><a class="dropdown-item" href="#busana">BUSANA</a></li>
+    <li><a class="dropdown-item" href="#tkr">TKR</a></li>
+    <li><a class="dropdown-item" href="#tsm">TSM</a></li>
+  </ul>
+</div>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#data siswa">Data Siswa</a>
+    </div>
+  </nav>
+</nav>
+</div>
+</div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Layanan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kontak</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!--hero section-->
+    <div class="hero" id="Beranda">
+    <div
+    class="overlay d-flex justify-content-center align-items-center text-center">
+    <div class="text-white">
+        <h1 class="display-5 fw-bold">Sistem Manajemen Siswa</h1>
+         <p class="fs-4">Kelola Data Kehadiran profil dan status akademik siswa lebih mudah dan efisien</p>
+         <button class="btn btn-primary btn-lg">lihat tabel</button>
+         <button class="btn btn-outline-light btn-lg">Panduan</button>
+        <button type="button" class="btn-outline btn-primary position-absolute">
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    baru
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>
+
+   </div>
+        </div>
+    </div>
+    <!--breadcrumb-->
+    <nav class="container mt-4">
+       <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">home</a></li>
+        <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+        <li class="breadcrumb-item active">data siswa 2026</li>
+       </ol>
+    </nav>
+    
+<div class="container my-5 pt-3">
+            <h3 class="text-center fw-bold mb-5 animate-on-scroll fade-up">Mengapa SMK Digital</h3>
+            
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4 d-flex align-items-start mb-4 mb-md-0 animate-on-scroll fade-up hover-lift delay-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-mortarboard-fill icon-alasan me-3" viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/><path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/></svg>
+                    <div>
+                        <h5 class="fw-bold mb-1">Lulusan</h5>
+                        <p class="small text-muted mb-0">SMK Digital meluluskan banyak siswa yang tak hanya bekerja namun juga berwirausaha dan sekolah tinggi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-start mb-4 mb-md-0 animate-on-scroll fade-up hover-lift delay-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-award-fill icon-alasan me-3" viewBox="0 0 16 16"><path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/></svg>
+                    <div>
+                        <h5 class="fw-bold mb-1">Prestasi</h5>
+                        <p class="small text-muted mb-0">SMK Digital mendapat beberapa prestasi baik dari tingkat lokal sampai internasional.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-start animate-on-scroll fade-up hover-lift delay-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-building-fill icon-alasan me-3" viewBox="0 0 16 16"><path d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/></svg>
+                    <div>
+                        <h5 class="fw-bold mb-1">Fasilitas</h5>
+                        <p class="small text-muted mb-0">SMK Digital memiliki lingkungan belajar yang nyaman serta kelengkapan sarana dan prasarana.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 d-flex align-items-start mb-4 mb-md-0 animate-on-scroll fade-up hover-lift delay-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-book-half icon-alasan me-3" viewBox="0 0 16 16"><path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/></svg>
+                    <div>
+                        <h5 class="fw-bold mb-1">Kurikulum</h5>
+                        <p class="small text-muted mb-0">Kurikulum SMK Digital menerapkan Kurikulum Merdeka untuk semua tingkat/kelasnya.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-start animate-on-scroll fade-up hover-lift delay-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-people-fill icon-alasan me-3" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></svg>
+                    <div>
+                        <h5 class="fw-bold mb-1">Budaya Industri</h5>
+                        <p class="small text-muted mb-0">SMK Digital telah menerapkan beberapa budaya industri di lingkungan sekolah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+     </div>
+
+
+
+
+
+<!--visi misi-->
+    <div class="container mt-4 table-striped" id="visi-misi">
+    <div class="row card-h-100 btn-secondary">     
+        <h4 class="text-center mb-3">Visi & Misi Lembaga</h4>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="card h-100">
+                <div class="card-header bg-primary text-white text-center">
+                    VISI SEKOLAH
+                </div>
+                <div class="card-body text-center">
+                    <p>
+                    “Menciptakan insan bertaqwa yang solutif, santun, optimis,
+                    lugas, terampil dan inovatif guna menjunjung martabat bangsa.”
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                <div class="card-header bg-primary text-white text-center ">
+                <ul class="list-group"></ul>
+                    MISI SEKOLAH
+                </div>
+                <div class="card-body">
+                    <ul>
+                   <li class="list-group-item d-flex align-items-start gap-3"> <span class="badge bg-primary rounded-pill">
+                    01</span>Excellent; Meningkatkan pelayanan pada siswa dengan mengedepankan pembelajaran yang berpihak pada siswa</li>
+                
+
+           <li class="list-group-item d-flex align-items-start gap-3"> 
+            <span class="badge bg-primary rounded-pill">
+            02</span> Smart; Mengenmbangkan keunggulan dengan mengedepankan sikap mandiri, kreatif dan kolaboratif sesuai dengan profil pelajar pancasila</li>
+
+          <li class="list-group-item d-flex align-items-start gap-3">
+         <span class="badge bg-primary rounded-pill">
+         03</span> Attainable; Mewujudkan sekolah-sekolah sebagai wadah kreasi, innovasi untuk pengembangan ilmu pengetahuan dan teknologi</li>
+
+       <li class="list-group-item d-flex align-items-start gap-3">
+       <span class="badge bg-primary rounded-pill">
+      04</span> Timebound; Menciptakan sekolah yang menerapkan perencanaan berbasis data dan melibatkan seluruh warga sekolah</li>
+
+      <li class="list-group-item d-flex align-items-start gap-3">
+      <span class="badge bg-primary rounded-pill">
+     05</span> Actual; Mendidik dan melatih peserta didik sesuai kebutuhan dunia kerja</li>
+                </div>
+                    </ul>
+                </div>
+             </div>
+            </div>
+         </div>
+      </div>
+     </div>
+ <!--Card group jurusan-->
+ <section class="container mt-5">
+    <h4 class="text-center mb-3">Ringkasan Angkatan per Jurusan</h4>
+    <div class="row">
+        <div class="col-md-150">
+            <div class="card-group">
+                <div class="card">
+                 <div class="row g-4 justify-content-center">
+
+    <!-- 1 -->
+     <div class="jnck"></div>
+    <div class="col-md-4" id="pplg">
+      <div class="card h-100 shadow-sm">
+        <img src="https://rplxsata.com/assets/images/logo1.png" class="card-img-top">
+        <div class="card-body">
+          <h5>PPLG</h5>
+          <p>Pengembangan Perangkat Lunak & Gim</p>
+          <p><b>Siswa:</b> 144</p>
+          <p><b>Lab:</b> 4 Ruangan</p>
+  <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+    terpopuler
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>
+ <div class="progress">
+        <div
+         class="progress-bar progress-bar-striped progress-bar-animated"
+          style="width: 100%;"
+          >
+          100%
+ </div>
+    </div>
+        </div>
+
+<!--Baca Selengkapnya-->
+<div class="text-center align-middle d-flex justify-content-end"><button class="btn btn-outline-primary " ><a href="isi pplg.html">Baca Selengkapnya -></a></button>
+</div>
+
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="col-md-4" id="tkj">
+      <div class="card h-100 shadow-sm">
+        <img src="https://smkn1tengaran.sch.id/wp-content/uploads/2019/08/LOGO-TKJ.png" class="card-img-top">
+        <div class="card-body">
+          <h5>TJKT</h5>
+          <p>Teknik Jaringan Komputer</p>
+          <p><b>Siswa:</b> 108</p>
+          <p><b>Lab:</b> 3 Ruangan</p>
+           <div class="progress">
+        <div
+         class="progress-bar progress-bar-striped progress-bar-animated"
+          style="width: 20%;"
+          >
+          20%
+        </div>
+    </div>
+        </div>
+
+<!--Baca Selengkapnya-->
+<div class="text-center align-middle d-flex justify-content-end"><button class="btn btn-outline-primary " ><a href="tkj.html">Baca Selengkapnya -></a></button>
+</div>
+
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="col-md-4" id="busana">
+      <div class="card h-100 shadow-sm">
+        <img src="https://smkperintis.sch.id/wp-content/uploads/2023/09/TABUS.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5>TB</h5>
+          <p>Tata Busana</p>
+          <p><b>Siswa:</b> 108</p>
+          <p><b>Lab:</b> 1 Standar Industri</p>
+           <div class="progress">
+        <div
+         class="progress-bar progress-bar-striped progress-bar-animated"
+          style="width: 50%;"
+          >
+          50%
+        </div>
+    </div>
+        </div>
+        
+
+<!--Baca Selengkapnya-->
+<div class="text-center align-middle d-flex justify-content-end"><button class="btn btn-outline-primary " ><a href="busana.html">Baca Selengkapnya -></a></button>
+</div>
+
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="col-md-4" id="Kuliner">
+      <div class="card h-100 shadow-sm">
+        <img src="https://smkn1tengaran.sch.id/wp-content/uploads/2019/08/tg.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Kuliner</h5>
+          <p>Tata Boga</p>
+          <p><b>Siswa:</b> 144</p>
+          <p><b>Lab:</b> 1 Unit Produktif</p>
+           <div class="progress">
+        <div
+         class="progress-bar progress-bar-striped progress-bar-animated"
+          style="width: 70%;"
+          >
+          70%
+        </div>
+    </div>
+        </div>
+
+<!--Baca Selengkapnya-->
+<div class="text-center align-middle d-flex justify-content-end"><button class="btn btn-outline-primary " ><a href="kuliner.html">Baca Selengkapnya -></a></button>
+</div>
+
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdKTmygaIvGba5EEAMWj7Enr2vtG6vloq5YQ&s" class="card-img-top">
+        <div class="card-body">
+          <h5>TSM</h5>
+          <p>Teknik Sepeda Motor</p>
+          <p><b>Siswa:</b> 144</p>
+          <p><b>Lab:</b> 1 Unit Produktif</p>
+           <div class="progress">
+        <div
+         class="progress-bar progress-bar-striped progress-bar-animated"
+          style="width: 80%;"
+          >
+          80%
+        </div>
+    </div>
+        </div>
+
+<!--Baca Selengkapnya-->
+<div class="text-center align-middle d-flex justify-content-end"><button class="btn btn-outline-primary " ><a href="otomotiv.html">Baca Selengkapnya -></a></button>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+</section>
+
+
+<div class="banner-statistik shadow-sm container-fluid px-4 px-lg-5">
+    <div class="row text-center align-items-center justify-content-center">
+        
+        <div class="col-6 col-md-3 mb-4 mb-md-0 d-flex flex-row justify-content-center align-items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-people-fill icon-stat" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+            </svg>
+            <div class="text-start">
+                <h3 class="fw-bold mb-0">2329</h3>
+                <p class="small mb-0">Siswa Aktif</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-4 mb-md-0 d-flex flex-row justify-content-center align-items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill icon-stat" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+            <div class="text-start">
+                <h3 class="fw-bold mb-0">93%</h3>
+                <p class="small mb-0">Keterserapan</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 d-flex flex-row justify-content-center align-items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-fill icon-stat" viewBox="0 0 16 16">
+                <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2z"/>
+            </svg>
+            <div class="text-start">
+                <h3 class="fw-bold mb-0">A</h3>
+                <p class="small mb-0">Akreditasi</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 d-flex flex-row justify-content-center align-items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-diagram-3-fill icon-stat" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5z"/>
+            </svg>
+            <div class="text-start">
+                <h3 class="fw-bold mb-0">130</h3>
+                <p class="small mb-0">Mitra Kerja</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="container my-5 pt-4">
+        <h3 class="text-center fw-bold mb-2">Mentor</h3>
+        <p class="text-center text-muted mb-5">Belajar bersama mentor luar negeri yang berpengalaman</p>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card card-mentor h-100 shadow-sm">
+                    <img src="https://cdn.api.upstation.media/2025-12/1767021428055_pemain-ganteng-mlbb-1.jpg" class="card-img-top foto-mentor" alt="Amba">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h6 class="fw-bold mb-1">Amba</h6>
+                        <p class="small text-muted fst-italic mb-3">Mentor Web Development</p>
+                        <p class="small text-secondary mb-4" style="font-size: 0.8rem;">Pembuatan situs web dari sisi front-end (HTML, CSS, JS), back-end (PHP, Node.js, Python), hingga full-stack.</p>
+                        <div class="mt-auto social-icons d-flex justify-content-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.873 11.633Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card card-mentor h-100 shadow-sm">
+                    <img src="https://cdn.api.upstation.media/2024-12/1733919754519_Untitled%20design%20(399).jpg" class="card-img-top foto-mentor" alt="Rusdi Barbershop">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h6 class="fw-bold mb-1">Rusdi Barbershop</h6>
+                        <p class="small text-muted fst-italic mb-3">Mentor Back-End Developer</p>
+                        <p class="small text-secondary mb-4" style="font-size: 0.8rem;">Mengelola logika, server, dan basis data (database) agar website berfungsi di balik layar.</p>
+                        <div class="mt-auto social-icons d-flex justify-content-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.873 11.633Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card card-mentor h-100 shadow-sm">
+                    <img src="https://cdn.api.upstation.media/2025-12/1767021486472_pemain-ganteng-mlbb-2.jpg" class="card-img-top foto-mentor" alt="Fuad Spartan">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h6 class="fw-bold mb-1">Fuad Spartan</h6>
+                        <p class="small text-muted fst-italic mb-3">Mentor Website Builder</p>
+                        <p class="small text-secondary mb-4" style="font-size: 0.8rem;">Menggunakan platform seperti WordPress, Wix, atau Shopify untuk membangun situs tanpa koding teknis mendalam.</p>
+                        <div class="mt-auto social-icons d-flex justify-content-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.873 11.633Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card card-mentor h-100 shadow-sm">
+                    <img src="https://cdn.api.upstation.media/2024-12/1733919548851_Untitled%20design%20(405).jpg" alt="Yes Picollo">
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h6 class="fw-bold mb-1">Yes Picollo</h6>
+                        <p class="small text-muted fst-italic mb-3">Mentor UI/UX Design</p>
+                        <p class="small text-secondary mb-4" style="font-size: 0.8rem;">Fokus pada estetika, tata letak, warna, dan pengalaman pengguna (UX) menggunakan alat seperti Figma atau Adobe XD.</p>
+                        <div class="mt-auto social-icons d-flex justify-content-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.873 11.633Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- SECTION KERJA SAMA -->
+<section class="partner-section">
+  <div class="container">
+    <h3 class="fw-bold">KERJA SAMA KAMI</h3>
+    <p>Membangun sinergi strategis bersama mitra terpercaya untuk menghadirkan solusi inovatif dan berkelanjutan di setiap langkah kami.</p>
+
+    <div class="d-flex justify-content-center flex-wrap partner-logo">
+
+      <!-- IBM -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+
+      <!-- Microsoft -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+
+      <!-- Google -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+
+      <!-- Facebook -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+
+      <!-- BUMN -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Logo_BUMN.svg" alt="BUMN">
+
+    </div>
+  </div>
+</section>
+
+
+
+<!--TABEL DATA SISWA-->
+<section class="text-center container mt-5 mb-5" id="data siswa">
+    <h4 class="mb-3">Tabel Data Siswa</h4>
+    <p class="text-center">kelola setatus dan administrasi secara real-time</p>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<div class="text-center align-middle d-flex justify-content-end">
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambah">
+  Tambah Data siswa
+</button>
+<button class="btn btn-outline-primary btn-lg">Expor Ke Excle</button>
+<div class="modal fade" id="modalTambah" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Tambah Siswa Baru</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <form>
+
+          <!-- Nama -->
+          <div class="mb-3">
+            <label class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" placeholder="Contoh: Budi Santoso">
+          </div>
+
+          <!-- Kelas -->
+          <div class="mb-3">
+            <label class="form-label">Kelas</label>
+            <select class="form-select">
+              <option selected disabled>Pilih Kelas...</option>
+              <option>X PPLG 1</option>
+              <option>X PPLG 2</option>
+              <option>XI TKJ</option>
+              <option>XII RPL</option>
+            </select>
+          </div>
+
+          <!-- Foto -->
+          <div class="mb-3">
+            <label class="form-label">Foto Profil</label>
+            <input type="file" class="form-control">
+            <small class="text-muted">Format: JPG, PNG (Maks 2MB)</small>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Simpan Data</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-primary alert-dismissible fade show text-center"  role="alert" >
+   <a href="#" class="alert-link">  info  </a>  klik tombol
+   <a href="#" class="alert-link">  edit  </a> edit
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" fdprocessedid="a9ua37"></button>
+</div>
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr class="budg bg-dark">
+        <th>No</th>
+        <th>Foto</th>
+        <th>Nama</th>
+        <th>Kelas</th>
+        <th>Status</th>
+        <th>Aksi</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       <td>1</td>
+       <td>
+                        <div class="position-relative d-inline-block">
+                            <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/13/fakta-unik-para-pemain-first-raiders-yang-harus-kamu-tahu-1.png?w=540"
+                                class="rounded-circle img-fluid"
+                                style="max-width: 80px; max-height: 80px;">
+
+                            <span class="position-absolute top-0 end-0 
+                                badge bg-success rounded-circle p-2 border border-light">
+                            </span>
+                        </div>
+                    </td>
+        
+        <td>SURDI</td>
+       <td>X TJKT 1</td>
+       <td><span class="btn bg-success">Aktif</span></td>
+       <td>
+        <span class="btn bg-warning">Edit</span>
+        <span class="btn  bg-danger">Hapus</span>
+
+       </td>
+      </tr>
+
+      <tr>
+       <td>2</td>
+       <td>
+                        <div class="position-relative d-inline-block">
+                            <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/13/fakta-unik-para-pemain-first-raiders-yang-harus-kamu-tahu.png?w=540"
+                                class="rounded-circle img-fluid"
+                                style="max-width: 80px; max-height: 80px;">
+
+                            <span class="position-absolute top-0 end-0 
+                                badge bg-warning rounded-circle p-2 border border-light">
+                            </span>
+                        </div>
+                    </td
+         alt="foto"
+         class="rounded-circle d-block mx-auto mb-5"
+         width="100" height="100"></td>
+       <td>PARDI</td>
+       <td>X TB 2</td>
+       <td><span class="btn bg-warning">Izin</span></td>
+        <td>
+          <span class="btn bg-warning">Edit</span>
+        <span class="btn bg-danger">Hapus</span>
+        </td>
+      </tr>
+
+      <tr>
+       <td>3</td>
+       <td>
+                        <div class="position-relative d-inline-block">
+                            <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/13/fakta-unik-para-pemain-first-raiders-yang-harus-kamu-tahu-3.png?w=540"
+                                class="rounded-circle img-fluid"
+                                style="max-width: 80px; max-height: 80px;">
+
+                            <span class="position-absolute top-0 end-0 
+                                badge bg-danger rounded-circle p-2 border border-light">
+                            </span>
+                        </div>
+                    </td>
+         
+       <td>NARDI</td>
+       <td>X PPLG 3</td>
+       <td><span class="btn bg-danger">Tidak hadir</span></td>
+        
+       <td><span class="btn bg-warning">Edit</span>
+        <span class="btn bg-danger">Hapus</span>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+ </div>
+ <!--PAGINATION-->
+ <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link">Next</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+
+<div class="alert alert-light alert-dismissible fade show text-center"  role="alert" >
+  <h1 class="strong">setatistik kehadiran</h1>
+  <p>setatistik kehadiran secara real-time</p>
+</div>
+<div class="container mt-4">
+<div class="progress">
+        <div class="progress-bar bg-success" style="width: 40%;">40%</div>
+        <div class="progress-bar bg-warning" style="width: 30%;">30%</div>
+        <div class="progress-bar bg-danger" style="width: 30%;">30%</div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+<section class="py-5">
+<div class="container">
+
+    <div class="text-center mb-4">
+        <h3 class="fw-bold">Hubungi Kami</h3>
+        <p class="text-muted">Hubungi kami untuk informasi lebih lanjut</p>
+    </div>
+
+    <div class="contact-box">
+        <div class="row">
+
+            <!-- INFO KONTAK -->
+            <div class="col-md-4 mb-4">
+
+                <div class="d-flex mb-4">
+                    <div class="contact-icon me-3">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1 fw-bold">Lokasi Kami</h6>
+                        <small class="text-muted">
+                            Jl. Makassar No.1, Sulawesi Selatan
+                        </small>
+                    </div>
+                </div>
+
+                <div class="d-flex mb-4">
+                    <div class="contact-icon me-3">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1 fw-bold">Telephone</h6>
+                        <small class="text-muted">+62 812 3456 7890</small>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="contact-icon me-3">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-1 fw-bold">Email</h6>
+                        <small class="text-muted">mail@gmail.com</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+            <div class="col-md-8">
+
+                <h5 class="fw-bold mb-3">Kirim Pesan</h5>
+
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Masukkan Nama">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Masukkan Email">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Masukkan Subjek">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="4" placeholder="Pesan"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary px-4">
+                        Kirim Pesan
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

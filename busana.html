@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busana - SMKN TENGARAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        /* ===== RESET ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f1f5f9;
+            color: #334155;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(60,10,60,0.88), rgba(100,20,80,0.85)),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-t7o85UR3G7zgAstwV45W1H_ArnoJ5EQMBA&s') center/cover no-repeat;
+            padding: 80px 0 60px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero .badge-jurusan {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 16px auto 0;
+            font-size: 1rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        /* ===== LAYOUT ===== */
+        .page-wrapper {
+            max-width: 1200px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+        }
+
+        /* ===== MAIN CARD ===== */
+        .main-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 44px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+        }
+
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #9333ea;
+            margin-bottom: 10px;
+        }
+
+        .main-card h2 {
+            font-weight: 700;
+            font-size: 1.75rem;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .main-card .desc {
+            color: #64748b;
+            line-height: 1.85;
+            font-size: 0.95rem;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #f1f5f9;
+            margin: 32px 0;
+        }
+
+        /* ===== FEATURE GRID ===== */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+        }
+
+        .feature-item h6 {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
+        .feature-item p {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===== FEATURE ICON ===== */
+        .fi-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .fi-purple { background: #f3e8ff; color: #9333ea; }
+        .fi-pink   { background: #fce7f3; color: #db2777; }
+        .fi-blue   { background: #dbeafe; color: #2563eb; }
+        .fi-yellow { background: #fef9c3; color: #ca8a04; }
+
+        /* ===== FASILITAS ===== */
+        .fasilitas-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .fasilitas-list {
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .fasilitas-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .fasilitas-row:last-child {
+            border-bottom: none;
+        }
+
+        .fasilitas-row:hover {
+            background: #f8fafc;
+        }
+
+        /* ===== PILLS ===== */
+        .pill {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 50px;
+        }
+
+        .pill-purple { background: #f3e8ff; color: #9333ea; }
+        .pill-pink   { background: #fce7f3; color: #db2777; }
+        .pill-blue   { background: #dbeafe; color: #2563eb; }
+        .pill-yellow { background: #fef9c3; color: #b45309; }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ===== INFO STATS ===== */
+        .info-stats {
+            background: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #0f172a;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+
+        /* ===== STATUS CARD ===== */
+        .status-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+        }
+
+        .status-header {
+            background: #0f172a;
+            color: #fff;
+            text-align: center;
+            padding: 18px;
+            font-weight: 650;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .status-body {
+            padding: 24px;
+        }
+
+        .kuota-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-wrap {
+            background: #e2e8f0;
+            border-radius: 50px;
+            height: 10px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #9333ea, #db2777);
+        }
+
+        .btn-daftar {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(135deg, #9333ea, #db2777);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-daftar:hover {
+            opacity: 0.88;
+            color: #fff;
+        }
+
+        .btn-kembali {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .btn-kembali:hover {
+            color: #334155;
+        }
+
+        /* ===== TESTIMONI ===== */
+        .testimoni-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+        }
+
+        .testimoni-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .testimoni-body {
+            padding: 20px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
+            .main-card { padding: 24px; }
+            .page-wrapper { margin-top: -20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://smkn1tengaran.sch.id/wp-content/uploads/2025/10/logo-web-1.jpg" alt="Logo" width="40" height="40">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#visi-misi">Visi Misi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownJurusan" role="button" data-bs-toggle="dropdown">Jurusan</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tugas3pplg.html">PPLG</a></li>
+                            <li><a class="dropdown-item" href="tugas3tjkt.html">TKJT</a></li>
+                            <li><a class="dropdown-item" href="tugas3otomotif.html">OTOMOTIF</a></li>
+                            <li><a class="dropdown-item" href="tugas3kuliner.html">KULINER</a></li>
+                            <li><a class="dropdown-item active" href="tugas3busana.html">BUSANA</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#datasiswa">Data Siswa</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Desain &<br>Produksi Busana</h1>
+            <p>Membekali siswa dengan kreativitas fashion, teknik menjahit modern, dan desain busana profesional untuk menjawab kebutuhan industri mode Indonesia dan global.</p>
+        </div>
+    </div>
+
+    <div class="page-wrapper mt-5">
+        <div class="row g-4 align-items-start">
+
+            <div class="col-lg-8">
+                <div class="main-card">
+
+                    <div class="section-label">Tentang Jurusan</div>
+                    <h2>Berkreasi, Berkarya, dan Berfashion</h2>
+                    <p class="desc">
+                        Program Desain dan Produksi Busana mempelajari seluruh proses pembuatan busana secara profesional,
+                        mulai dari menggambar desain, pembuatan pola, teknik memotong kain, menjahit, hingga finishing
+                        produk busana. Siswa juga mempelajari desain busana berbantuan komputer (CAD), pengetahuan tekstil,
+                        serta tren mode global. Lulusan siap bekerja di industri garmen, butik, fashion house, maupun
+                        membuka usaha fashion sendiri.
+                    </p>
+
+                    <hr class="divider">
+
+                    <div class="section-label">Kompetensi Keahlian</div>
+                    <div class="feature-grid mt-3">
+                        <div class="feature-item">
+                            <div class="fi-icon fi-pink"><i class="bi bi-scissors"></i></div>
+                            <div>
+                                <h6>Teknik Menjahit</h6>
+                                <p>Pembuatan pola, pemotongan, dan menjahit busana modern.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="fi-icon fi-blue"><i class="bi bi-grid-1x2-fill"></i></div>
+                            <div>
+                                <h6>Tekstil & Material</h6>
+                                <p>Pengetahuan jenis kain, sifat tekstil, dan teknik pewarnaan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="fasilitas-title">Fasilitas Unggulan</div>
+                    <div class="fasilitas-list">
+                        <div class="fasilitas-row">
+                            <span>Studio Menjahit</span>
+                            <span class="pill pill-purple">2 Workshop</span>
+                        </div>
+                        <div class="fasilitas-row">
+                            <span>Mesin Jahit Industri & Obras</span>
+                            <span class="pill pill-pink">30 Unit</span>
+                        </div>
+                        <div class="fasilitas-row">
+                            <span>Software Desain Busana (CAD)</span>
+                            <span class="pill pill-blue">Tersedia</span>
+                        </div>
+                        <div class="fasilitas-row">
+                            <span>Sertifikasi Kompetensi BNSP</span>
+                            <span class="pill pill-yellow">Voucher Tersedia</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="status-card">
+                    <div class="status-header">Status Pendaftaran</div>
+                    <div class="status-body">
+                        <div class="kuota-row">
+                            <span>Kuota Terisi</span>
+                            <span>85%</span>
+                        </div>
+
+                        <div class="progress" style="height: 12px; border-radius: 10px; overflow: hidden;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                                style="width: 85%">
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-daftar mt-4">Daftar Sekarang</a>
+                        <a href="#" class="d-block text-center mt-3 text-decoration-none text-muted small">← Kembali</a>
+                    </div>
+                </div>
+
+                    <div class="testimoni-card">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80" alt="Studio Busana">
+                        <div class="testimoni-body">
+                            <p>"Ilmu desain yang saya dapat di sekolah membantu saya membuka brand fashion sendiri."</p>
+                            <p>— Dewi Anggraini, Alumni 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2026 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

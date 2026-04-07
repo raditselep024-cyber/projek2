@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</body>
+</html> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+.navbar {
+  position: fixed; 
+  top: 0;          
+  width: 100%;     
+  z-index: 1000;   
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url(https://sevima.com/wp-content/uploads/2022/08/Teknik-Tata-Boga.jpg) center/cover no-repeat;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.card-custom {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-card {
+  border-radius: 15px;
+}
+
+.footer {
+  background: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.icon-box {
+  background-color: #e7f1ff;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 22px;
+  color: #0d6efd;
+}
+</style>
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container">
+    <a class="navbar-brand d-flex align-items-center text-light fw-bold" href="#">
+      <img src="https://smkn1tengaran.sch.id/wp-content/uploads/2025/10/logo-web-1.jpg" alt="Logo SMKN Tengaran" width="40" class="me-2">
+      
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="tugas2.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="tugas2.html">Visi Misi</a></li>
+        <li class="nav-item"><a class="nav-link" href="tugas2.html">Data Siswa</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jurusan</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#PPLG">PPLG</a></li>
+            <li><a class="dropdown-item" href="#TKJ">TKJ</a></li>
+            <li><a class="dropdown-item" href="#BUSANA">BUSANA</a></li>
+            <li><a class="dropdown-item" href="#KULINER">KULINER</a></li>
+            <li><a class="dropdown-item" href="#TSM">TSM</a></li>
+            <li><a class="dropdown-item" href="#TKR">TKR</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1 class="fw-bold">KULINER</h1>
+    <p>
+      Jurusan yang membekali peserta didik dalam dunia tata boga dan bisnis kuliner.
+    </p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="container my-5">
+  <div class="row g-4">
+
+    <!-- KIRI -->
+    <div class="col-lg-8">
+      <div class="card p-4 card-custom">
+
+        <h3 class="fw-bold">Mengembangkan Kreativitas di Dunia Kuliner.</h3>
+        <p>
+          Mempelajari pengolahan makanan, penyajian, hingga manajemen usaha kuliner.
+        </p>
+
+        <!-- FITUR -->
+        <div class="row mt-4">
+<div class="col-md-6 d-flex gap-3">
+  <div class="icon-box"><i class="bi bi-egg-fried"></i></div>
+  <div>
+    <h6 class="fw-bold mb-0">Memasak</h6>
+    <small>Teknik memasak berbagai hidangan.</small>
+  </div>
+</div>
+
+<div class="col-md-6 d-flex gap-3">
+  <div class="icon-box"><i class="bi bi-cup-hot"></i></div>
+  <div>
+    <h6 class="fw-bold mb-0">Bisnis Kuliner</h6>
+    <small>Manajemen usaha makanan.</small>
+  </div>
+</div>
+
+</div>
+  
+        <hr class="my-4">
+
+        <!-- FASILITAS -->
+        <h5 class="fw-bold">Fasilitas Unggulan</h5>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between">
+            Laboratorium Komputer
+            <span class="badge bg-primary">2 Lab</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Akses High Speed Internet
+            <span class="badge bg-primary">Full WiFi</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Sertifikasi Industri (Oracle/Microsoft)
+            <span class="badge bg-primary">Voucher Tersedia</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- KANAN (SIDEBAR) -->
+    <div class="col-lg-4">
+
+      <!-- STATUS -->
+      <div class="card sidebar-card mb-4">
+        <div class="card-header bg-dark text-white text-center fw-bold">
+          Status Pendaftaran
+        </div>
+
+        <div class="card-body">
+          <p class="mb-1 fw-bold">Kuota Terisi <span class="float-end">80%</span></p>
+
+          <div class="progress mb-3" style="height:8px;">
+            <div class="progress-bar progress-bar-striped" style="width:80%"></div>
+          </div>
+
+          <button class="btn btn-primary w-100 mb-2 ">DAFTAR SEKARANG</button>
+          <button class="btn btn-light w-100">← Kembali</button>
+        </div>
+      </div>
+
+      <!-- TESTIMONI -->
+      <div class="card sidebar-card">
+        <img src="https://cdn.upstation.asia/wp-content/uploads/2021/10/12144316/kboo.jpg" class="card-img-top">
+
+        <div class="card-body">
+          <p class="small">
+            "Belajar kuliner sangat menyenangkan!."
+          </p>
+          <b>- Agus, Alumni 2016</b>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 SMKN TENGARAN. Seluruh Hak Cipta Dilindungi.
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
